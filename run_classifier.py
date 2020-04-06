@@ -46,7 +46,8 @@ def get_model(args):
     model_args = args
     if args.load is not None and args.load != '':
         # sd = torch.load(args.load, map_location=lambda storage, location: 'cpu')
-        sd = torch.load(args.load, map_location=torch.device('cpu'))
+        device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        sd = torch.load(args.load, map_location=device)
         if 'args' in sd:
             model_args = sd['args']
         if 'sd' in sd:
