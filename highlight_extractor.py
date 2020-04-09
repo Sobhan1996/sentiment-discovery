@@ -21,6 +21,4 @@ for filename in os.listdir(dm_dir_path):
 
     i = i+1
 
-df.to_csv(r'./DM_highlights.csv', index=False, header=True)
-# print(len([name for name in os.listdir(cnn_dir_path) if os.path.isfile(os.path.join(cnn_dir_path, name))]))
-# print(len([name for name in os.listdir(dm_dir_path) if os.path.isfile(os.path.join(dm_dir_path, name))]))
+# df.to_csv(r'./DM_highlights.csv', index=False, header=True)
